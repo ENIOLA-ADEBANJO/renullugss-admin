@@ -58,6 +58,21 @@ const Shop = () => {
         setProductsData(filteredProducts);
     }
 
+    if (filterValue === 'Toilet Seat Cover'){
+      const filteredProducts = products.filter(
+        (item) => item.category === 'Toilet Seat Cover'
+        );
+        setProductsData(filteredProducts);
+    }
+
+    if (filterValue === 'Urinal'){
+      const filteredProducts = products.filter(
+        (item) => item.category === 'Urinal'
+        );
+        setProductsData(filteredProducts);
+    }
+
+
     if (filterValue === 'Toilet Taps'){
       const filteredProducts = products.filter(
         (item) => item.category === 'Toilet Taps'
@@ -71,6 +86,7 @@ const Shop = () => {
         );
         setProductsData(filteredProducts);
     }
+
     
 
     if (filterValue === 'BathTubs'){
@@ -126,6 +142,8 @@ const Shop = () => {
                 <option value="Door Hooks">Door Hooks</option>
                 <option value="Door Knobs">Door Knobs</option>
                 <option value="Toilet Seats">Toilet Seats</option>
+                <option value="Toilet Seat Cover">Toilet Seat Cover</option>
+                <option value="Urinal">Urinal</option>
                 <option value="Toilet Taps">Toilet Taps</option>
                 <option value="Toilet Basins">Toilet Basins</option>
                 <option value="BathTubs">BathTubs</option>

@@ -46,11 +46,7 @@ import img56 from "../images/cements/Lafarge Unicem Cement.jpeg"
 import img60 from "../images/toilet-seats/Affine Oceane Close Coupled Toilet & Soft Close Seat.webp"
 import img61 from "../images/toilet-seats/Affine Royan Close Coupled Toilet & Soft Close Seat.webp"
 import img62 from "../images/toilet-seats/Baystone Paris Premium Close Coupled Toilet with Soft Close Seat.webp"
-import img63 from "../images/toilet-seats/Bemis 5000 Round White Moulded Wood Toilet Seat.webp"
-import img64 from "../images/toilet-seats/Bemis 5900 Ultra-Fix Round White Toilet Seat.webp"
 import img65 from "../images/toilet-seats/Ceramica Arles Close Coupled Toilet & Soft Close Seat.webp"
-import img66 from "../images/toilet-seats/Croydex Constance Flexi-Fix Soft Close Round White Thermoset Plastic Toilet Seat.webp"
-import img67 from "../images/toilet-seats/Croydex Varese Flexi-Fix Soft Close D-Shape Wooden Toilet Seat Grey Oak.webp"
 import img68 from "../images/toilet-seats/Roca Debba Close Coupled Toilet.webp"
 import img69 from "../images/toilet-seats/Park Lane Legend Toilet & Soft Close Seat.webp"
 
@@ -75,6 +71,17 @@ import img93 from "../images/bathtub/Sandringham bathtub.jpeg"
 
 import img100 from "../images/cubicle/Quadrant Shower Cubicle.jpeg"
 import img101 from "../images/cubicle/Square Shower Cubicle .jpeg"
+
+import img110 from "../images/urinal/Contour Urinal Bowl.jpeg"
+import img111 from "../images/urinal/Sanura Urinal bowl.jpeg"
+import img112 from "../images/urinal/Washbrook Urinal Bowl.jpeg"
+
+import img63 from "../images/toilet-seats/Bemis 5000 Round White Moulded Wood Toilet Seat.webp"
+import img64 from "../images/toilet-seats/Bemis 5900 Ultra-Fix Round White Toilet Seat.webp"
+import img66 from "../images/toilet-seats/Croydex Constance Flexi-Fix Soft Close Round White Thermoset Plastic Toilet Seat.webp"
+import img67 from "../images/toilet-seats/Croydex Varese Flexi-Fix Soft Close D-Shape Wooden Toilet Seat Grey Oak.webp"
+
+
 
 const products = [
   {
@@ -634,21 +641,6 @@ const products = [
       avgRating: 4.5,
     },
 
-    // {
-    //   id: "64",
-    //   productName: "Bemis Round White Toilet Seat",
-    //   imgUrl: img64,
-    //   category: "Toilet Seats",
-    //   price: 22000,
-    //   reviews: [
-    //     {
-    //       rating: 4.7,
-    //       text: "Nice Toilet Seat",
-    //     },
-    //   ],
-    //   avgRating: 4.5,
-    // },
-
     {
       id: "65",
       productName: "Ceramica Arles Close Coupled Toilet",
@@ -663,36 +655,6 @@ const products = [
       ],
       avgRating: 4.5,
     },
-
-    // {
-    //   id: "66",
-    //   productName: "Croydex Constance Plastic Toilet Seat",
-    //   imgUrl: img66,
-    //   category: "Toilet Seats",
-    //   price: 22000,
-    //   reviews: [
-    //     {
-    //       rating: 4.7,
-    //       text: "Nice Toilet Seat",
-    //     },
-    //   ],
-    //   avgRating: 4.5,
-    // },
-
-    // {
-    //   id: "67",
-    //   productName: "Croydex Varese Wooden Toilet Seat",
-    //   imgUrl: img67,
-    //   category: "Toilet Seats",
-    //   price: 30000,
-    //   reviews: [
-    //     {
-    //       rating: 4.7,
-    //       text: "Nice Toilet Seat",
-    //     },
-    //   ],
-    //   avgRating: 4.5,
-    // },
 
     {
       id: "70",
@@ -950,6 +912,111 @@ const products = [
       avgRating: 4.5,
     },
   
+    {
+      id: "110",
+      productName: "Contour Urinal Bowl",
+      imgUrl: img110,
+      category: "Urinal",
+      price: 70000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+    
+    {
+      id: "111",
+      productName: "Sanura Urinal bowl",
+      imgUrl: img111,
+      category: "Urinal",
+      price: 70000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "112",
+      productName: "Washbrook Urinal Bowl",
+      imgUrl: img112,
+      category: "Urinal",
+      price: 70000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+
+    {
+      id: "63",
+      productName: "Bemis Round Wood Toilet Seat",
+      imgUrl: img63,
+      category: "Toilet Seat Cover",
+      price: 22000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+    
+    {
+      id: "64",
+      productName: "Bemis Ultra-Fix Round Toilet Seat",
+      imgUrl: img64,
+      category: "Toilet Seat Cover",
+      price: 14000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "66",
+      productName: "Croydex Constance Plastic Toilet Seat",
+      imgUrl: img66,
+      category: "Toilet Seat Cover",
+      price: 17000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+        
+    {
+      id: "67",
+      productName: "Croydex Varese Wooden Toilet Seat",
+      imgUrl: img67,
+      category: "Toilet Seat Cover",
+      price: 17000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice design",
+        },
+      ],
+      avgRating: 4.5,
+    },
+        
 
 
 ];
