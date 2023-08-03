@@ -69,7 +69,7 @@ const Footer = () => {
             <ListGroup className='footer__contact'>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-map-pin-line"></i></span>
-                <p> No. 36 Adediran Road, Ajoa Estate Lagos</p>
+                <p> Plot 284, Gbagada Express Way. Charley Boy Bus stop. Lagos, Nigeria</p>
               </ListGroupItem >
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-phone-line"></i></span>
@@ -77,7 +77,7 @@ const Footer = () => {
               </ListGroupItem>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>     
                 <span><i class="ri-mail-line"></i></span>
-                <p>anjola@gmail.com</p>
+                <p>oladimejianjola2001@gmail.com</p>
               </ListGroupItem>
             </ListGroup>
           </div>

@@ -58,13 +58,13 @@ const Home = () => {
           <Row>
             <Col lg='6' md='6'>
               <div className="hero__content">
-                <h5 className="hero__subtitle">
+                <h2 className="hero__subtitle">
                   Renllugs Building Resources
-                </h5>
+                </h2>
                 <br/>
                 <h3> No. 1 Online Shopping Platform for Building Resources in Nigeria</h3>
                 <br/>
-                <p>Experience the pleasure of getting affordable and quality bulding resources on our platform with fast delivery from the comfort your home </p>
+                <p>Experience the pleasure of getting affordable and quality building resources on our platform with fast delivery from the comfort of your home </p>
                   <motion.button whileTap={{scale: 1.2}} className='buy__btn'> <Link to = '/shop'>SHOP NOW</Link></motion.button>
               </div>
 
