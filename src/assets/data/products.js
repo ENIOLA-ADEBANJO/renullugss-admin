@@ -40,6 +40,8 @@ import img51 from "../images/cements/Dangote 3X 42.5R.png"
 import img52 from "../images/cements/Dangote Falcon.png"
 import img53 from "../images/cements/Dangote BlocMaster.png"
 import img54 from "../images/cements/BUA Cemment.webp"
+import img55 from "../images/cements/Lafarge Elephant Cement.webp"
+import img56 from "../images/cements/Lafarge Unicem Cement.jpeg"
 
 import img60 from "../images/toilet-seats/Affine Oceane Close Coupled Toilet & Soft Close Seat.webp"
 import img61 from "../images/toilet-seats/Affine Royan Close Coupled Toilet & Soft Close Seat.webp"
@@ -53,31 +55,52 @@ import img68 from "../images/toilet-seats/Roca Debba Close Coupled Toilet.webp"
 import img69 from "../images/toilet-seats/Park Lane Legend Toilet & Soft Close Seat.webp"
 
 
+import img70 from "../images/toilet-taps/Cerafit Basin Mixer Tap.jpeg"
+import img71 from "../images/toilet-taps/Cerafit Bath Shower Mixer.jpeg"
+import img72 from "../images/toilet-taps/Mara Basin Mixer Tap.jpeg"
+import img73 from "../images/toilet-taps/Melange Single Lever Basin Mixer Tap.jpeg"
+import img74 from "../images/toilet-taps/Slimline II Bath & Shower.jpeg"
+
+import img80 from "../images/toilet-basin/ALTO 60cm Wash Hand Basin With Wall Pedestals.jpeg"
+import img81 from "../images/toilet-basin/Alto Countertop Basin.jpeg"
+import img82 from "../images/toilet-basin/Independence Oval Basin.jpeg"
+import img83 from "../images/toilet-basin/Space Countertop Basin.jpeg"
+import img84 from "../images/toilet-basin/Strada Vessel Basin .jpeg"
+import img85 from "../images/toilet-basin/Tonic II Washbasin.jpeg"
+
+import img90 from "../images/bathtub/Florida Rectangular Bathtub.jpeg"
+import img91 from "../images/bathtub/Media Freestanding Bathtub.jpeg"
+import img92 from "../images/bathtub/Niagara Whirlpool Bathtub.jpeg"
+import img93 from "../images/bathtub/Sandringham bathtub.jpeg"
+
+import img100 from "../images/cubicle/Quadrant Shower Cubicle.jpeg"
+import img101 from "../images/cubicle/Square Shower Cubicle .jpeg"
+
 const products = [
   {
     id: "01",
-    productName: "Berkeley Lever On Rose Door Handle - Dual Tone",
+    productName: "Berkeley Lever On Rose Door Handle",
     imgUrl: img01,
     category: "Door Handles",
-    price: 50000,
+    price: 3500,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
   },
   {
     id: "02",
-    productName: "Dual Tone Satin & Black Internal Turnberry Lock Door Handle ",
+    productName: "Black Internal Lock Door Handle",
     imgUrl: img02,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -85,14 +108,14 @@ const products = [
 
   {
     id: "03",
-    productName: "Elpis Lever Latch Door Handle Matt Black.",
+    productName: "Elpis Lever Latch Door Handle",
     imgUrl: img03,
     category: "Door Handles",
-    price: 50000,
+    price: 6000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -100,14 +123,14 @@ const products = [
 
   {
     id: "04",
-    productName: "Augusta Lever On Rose Door Handle - Dual Tone Gold Brass",
+    productName: "Augusta Lever On Rose Door Handle",
     imgUrl: img04,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -118,11 +141,11 @@ const products = [
     productName: "Jasper Lever on Rose Antique Brass",
     imgUrl: img05,
     category: "Door Handles",
-    price: 50000,
+    price: 4500,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -130,14 +153,14 @@ const products = [
 
   {
     id: "06",
-    productName: "Kensington Knurled Lever On Rose Dual Tone Satin Nickel",
+    productName: "Kensington Knurled Lever Satin Nickel",
     imgUrl: img06,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -145,14 +168,14 @@ const products = [
 
   {
     id: "07",
-    productName: "Mocho Lever Polished Brass Bathroom Door Handle",
+    productName: "Mocho Bathroom Door Handle",
     imgUrl: img07,
     category: "Door Handles",
-    price: 50000,
+    price: 7000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -160,14 +183,14 @@ const products = [
 
   {
     id: "08",
-    productName: "Berkeley Lever Latch Door Handle - Satin Nickel",
+    productName: "Berkeley Lever Latch Door Handle",
     imgUrl: img08,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -178,25 +201,25 @@ const products = [
     productName: "Bordeaux Lever Latch Black Nickel",
     imgUrl: img09,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
   },
   {
     id: "10",
-    productName: "Capri Polished Chrome Lever Latch Door Handle",
+    productName: "Capri Polished Door Handle",
     imgUrl: img10,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -207,11 +230,11 @@ const products = [
     productName: "Stainless Steel Ball Bearing Hinges",
     imgUrl: img11,
     category: "Door Handles",
-    price: 50000,
+    price: 5000,
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Door Handle",
       },
     ],
     avgRating: 4.5,
@@ -227,7 +250,7 @@ const products = [
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Beautiful Door Hinges",
       },
     ],
     avgRating: 4.5,
@@ -295,14 +318,14 @@ const products = [
  
     {
       id: "30",
-      productName: "Oval Hat & Coat Hooks on Victorian Rail Satin Nickel",
+      productName: "Coat Hooks on Victorian Rail Satin",
       imgUrl: img30,
       category: "Door Hooks",
-      price: 50000,
+      price: 5000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Can i get this one",
         },
       ],
       avgRating: 4.5,
@@ -310,14 +333,14 @@ const products = [
 
     {
       id: "31",
-      productName: "Black Modern Tri Hooks on Dark Bamboo Board",
+      productName: "Black Modern Tri Hooks",
       imgUrl: img31,
       category: "Door Hooks",
-      price: 50000,
+      price: 4500,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "I love this alot",
         },
       ],
       avgRating: 4.5,
@@ -325,14 +348,14 @@ const products = [
 
     {
       id: "32",
-      productName: "Polished Chrome Hat & Coat Hooks on Pine Board",
+      productName: "Polished Coat Hooks on Pine Board",
       imgUrl: img32,
       category: "Door Hooks",
-      price: 50000,
+      price: 5000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Hooks",
         },
       ],
       avgRating: 4.5,
@@ -340,14 +363,14 @@ const products = [
 
     {
       id: "33",
-      productName: "Satin Nickel Ball End Hooks on Pearl Grey MDF Board",
+      productName: "Satin Nickel Ball End Hooks on MDF Board",
       imgUrl: img33,
       category: "Door Hooks",
-      price: 50000,
+      price: 7000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "It looks soo nice",
         },
       ],
       avgRating: 4.5,
@@ -355,14 +378,14 @@ const products = [
 
     {
       id: "40",
-      productName: "Beehive Reeded Round Mortice Door Knob Brushed Nickel",
+      productName: "Beehive Reeded Mortice Door Knob",
       imgUrl: img40,
       category: "Door Knobs",
-      price: 50000,
+      price: 20000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Very nice and durable door knob",
         },
       ],
       avgRating: 4.5,
@@ -370,14 +393,14 @@ const products = [
 
     {
       id: "41",
-      productName: "Black Glass Faceted Door Knob Polished Chrome",
+      productName: "Black Glass Faceted Door Knob Chrome",
       imgUrl: img41,
       category: "Door Knobs",
-      price: 50000,
+      price: 35000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Very nice and durable door knob",
         },
       ],
       avgRating: 4.5,
@@ -385,14 +408,14 @@ const products = [
 
     {
       id: "42",
-      productName: "Faceted Glass Mortice Sprung Door Knob Chrome",
+      productName: "Faceted Glass Door Knob Chrome",
       imgUrl: img42,
       category: "Door Knobs",
-      price: 50000,
+      price: 35000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Very nice and durable door knob",
         },
       ],
       avgRating: 4.5,
@@ -400,14 +423,14 @@ const products = [
 
     {
       id: "43",
-      productName: "Oval Mortice Door Knob - Black",
+      productName: "Oval Mortice Door Knob",
       imgUrl: img43,
       category: "Door Knobs",
-      price: 50000,
+      price: 20000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Very nice and durable door knob",
         },
       ],
       avgRating: 4.5,
@@ -415,19 +438,19 @@ const products = [
 
     {
       id: "44",
-      productName: "Ringed Mortice Round Door Handle Knob (Sprung) Black Nickel",
+      productName: "Ringed Mortice Round Door Knob",
       imgUrl: img44,
       category: "Door Knobs",
-      price: 50000,
+      price: 17000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Very nice and durable door knob",
         },
       ],
       avgRating: 4.5,
     },
-    
+
     {
       id: "50",
       productName: "Dangote 3X 42.5N",
@@ -437,7 +460,7 @@ const products = [
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Top Quality Cement",
         },
       ],
       avgRating: 4.5,
@@ -452,7 +475,7 @@ const products = [
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Top Quality Cement",
         },
       ],
       avgRating: 4.5,
@@ -467,7 +490,7 @@ const products = [
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Top Quality Cement",
         },
       ],
       avgRating: 4.5,
@@ -482,7 +505,7 @@ const products = [
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Top Quality Cement",
         },
       ],
       avgRating: 4.5,
@@ -490,29 +513,60 @@ const products = [
 
     {
       id: "54",
-      productName: "BUA",
+      productName: "BUA Cement",
       imgUrl: img54,
       category: "Cements",
-      price: 30000,
+      price: 4300,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Top Quality Cement",
         },
       ],
       avgRating: 4.5,
     },
 
     {
-      id: "60",
-      productName: "Affine Oceane Close Coupled Toilet & Soft Close Seat",
-      imgUrl: img60,
-      category: "Toilet Seats",
-      price: 30000,
+      id: "55",
+      productName: "Lafarge (Elephant) Cement",
+      imgUrl: img55,
+      category: "Cements",
+      price: 4200,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Top Quality Cement",
+        },
+      ],
+      avgRating: 4.5,
+    },
+
+    // {
+    //   id: "56",
+    //   productName: "Lafarge (Unicem) Cement",
+    //   imgUrl: img56,
+    //   category: "Cements",
+    //   price: 4000,
+    //   reviews: [
+    //     {
+    //       rating: 4.7,
+    //       text: "Top Quality Cement",
+    //     },
+    //   ],
+    //   avgRating: 4.5,
+    // },
+
+
+    {
+      id: "60",
+      productName: "Affine Oceane Close Coupled Toilet",
+      imgUrl: img60,
+      category: "Toilet Seats",
+      price: 65000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice Toilet Seat",
         },
       ],
       avgRating: 4.5,
@@ -520,14 +574,14 @@ const products = [
 
     {
       id: "61",
-      productName: "Affine Royan Close Coupled Toilet & Soft Close Seat",
+      productName: "Affine Royan Close Coupled Toilet",
       imgUrl: img61,
       category: "Toilet Seats",
-      price: 30000,
+      price: 65000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Seat",
         },
       ],
       avgRating: 4.5,
@@ -535,14 +589,14 @@ const products = [
 
     {
       id: "62",
-      productName: "Baystone Paris Premium Close Coupled Toilet with Soft Close Seat",
+      productName: "Baystone Paris Close Coupled Toilet",
       imgUrl: img62,
       category: "Toilet Seats",
-      price: 30000,
+      price: 60000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Seat",
         },
       ],
       avgRating: 4.5,
@@ -555,11 +609,11 @@ const products = [
       productName: "Roca Debba Close Coupled Toilet",
       imgUrl: img68,
       category: "Toilet Seats",
-      price: 30000,
+      price: 60000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Seat",
         },
       ],
       avgRating: 4.5,
@@ -567,80 +621,335 @@ const products = [
 
     {
       id: "69",
-      productName: "Park Lane Legend Toilet & Soft Close Seat",
+      productName: "Park Lane Legend Toilet",
       imgUrl: img69,
       category: "Toilet Seats",
-      price: 30000,
+      price: 50000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Seat",
         },
       ],
       avgRating: 4.5,
     },
 
-    {
-      id: "64",
-      productName: "Bemis 5900 Ultra-Fix Round White Toilet Seat",
-      imgUrl: img64,
-      category: "Toilet Seats",
-      price: 30000,
-      reviews: [
-        {
-          rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        },
-      ],
-      avgRating: 4.5,
-    },
+    // {
+    //   id: "64",
+    //   productName: "Bemis Round White Toilet Seat",
+    //   imgUrl: img64,
+    //   category: "Toilet Seats",
+    //   price: 22000,
+    //   reviews: [
+    //     {
+    //       rating: 4.7,
+    //       text: "Nice Toilet Seat",
+    //     },
+    //   ],
+    //   avgRating: 4.5,
+    // },
 
     {
       id: "65",
-      productName: "Ceramica Arles Close Coupled Toilet & Soft Close Seat",
+      productName: "Ceramica Arles Close Coupled Toilet",
       imgUrl: img65,
       category: "Toilet Seats",
-      price: 30000,
+      price: 60000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Seat",
+        },
+      ],
+      avgRating: 4.5,
+    },
+
+    // {
+    //   id: "66",
+    //   productName: "Croydex Constance Plastic Toilet Seat",
+    //   imgUrl: img66,
+    //   category: "Toilet Seats",
+    //   price: 22000,
+    //   reviews: [
+    //     {
+    //       rating: 4.7,
+    //       text: "Nice Toilet Seat",
+    //     },
+    //   ],
+    //   avgRating: 4.5,
+    // },
+
+    // {
+    //   id: "67",
+    //   productName: "Croydex Varese Wooden Toilet Seat",
+    //   imgUrl: img67,
+    //   category: "Toilet Seats",
+    //   price: 30000,
+    //   reviews: [
+    //     {
+    //       rating: 4.7,
+    //       text: "Nice Toilet Seat",
+    //     },
+    //   ],
+    //   avgRating: 4.5,
+    // },
+
+    {
+      id: "70",
+      productName: "Cerafit Basin Mixer Tap",
+      imgUrl: img70,
+      category: "Toilet Taps",
+      price: 11000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice Toilet Tap",
         },
       ],
       avgRating: 4.5,
     },
 
     {
-      id: "66",
-      productName: "Croydex Constance Flexi-Fix Soft Close Round White Thermoset Plastic Toilet Seat",
-      imgUrl: img66,
-      category: "Toilet Seats",
-      price: 30000,
+      id: "71",
+      productName: "Cerafit Bath Shower Mixer",
+      imgUrl: img71,
+      category: "Toilet Taps",
+      price: 14000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Tap",
         },
       ],
       avgRating: 4.5,
     },
 
     {
-      id: "67",
-      productName: "Croydex Varese Flexi-Fix Soft Close D-Shape Wooden Toilet Seat Grey Oak",
-      imgUrl: img67,
-      category: "Toilet Seats",
-      price: 30000,
+      id: "72",
+      productName: "Mara Basin Mixer Tap",
+      imgUrl: img72,
+      category: "Toilet Taps",
+      price: 11000,
       reviews: [
         {
           rating: 4.7,
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "Nice Toilet Tap",
         },
       ],
       avgRating: 4.5,
     },
 
+    {
+      id: "73",
+      productName: "Melange Single Lever Basin Mixer Tap",
+      imgUrl: img73,
+      category: "Toilet Taps",
+      price: 22000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice Toilet Tap",
+        },
+      ],
+      avgRating: 4.5,
+    },
 
+    {
+      id: "74",
+      productName: "Slimline II Bath & Shower",
+      imgUrl: img74,
+      category: "Toilet Taps",
+      price: 16000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Nice Toilet Tap",
+        },
+      ],
+      avgRating: 4.5,
+    },
+
+    {
+      id: "80",
+      productName: "ALTO Wash Basin With Wall Pedestals",
+      imgUrl: img80,
+      category: "Toilet Basins",
+      price: 45000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Quality Basin",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "81",
+      productName: "Alto Countertop Basin",
+      imgUrl: img81,
+      category: "Toilet Basins",
+      price: 32000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Quality Basin",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "82",
+      productName: "Independence Oval Basin",
+      imgUrl: img82,
+      category: "Toilet Basins",
+      price: 47000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Quality Basin",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "83",
+      productName: "Space Countertop Basin",
+      imgUrl: img83,
+      category: "Toilet Basins",
+      price: 63000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Quality Basin",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "84",
+      productName: "Strada Vessel Basin",
+      imgUrl: img84,
+      category: "Toilet Basins",
+      price: 29000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Quality Basin",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "85",
+      productName: "Tonic II Washbasin",
+      imgUrl: img85,
+      category: "Toilet Basins",
+      price: 35000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Quality Basin",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "90",
+      productName: "Florida Rectangular Bathtub",
+      imgUrl: img90,
+      category: "BathTubs",
+      price: 145000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Very beautiful bathtub",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "91",
+      productName: "Media Freestanding Bathtub",
+      imgUrl: img91,
+      category: "BathTubs",
+      price: 93000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Very beautiful bathtub",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "92",
+      productName: "Niagara Whirlpool Bathtub",
+      imgUrl: img92,
+      category: "BathTubs",
+      price: 150000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Very beautiful bathtub",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
+    {
+      id: "93",
+      productName: "Sandringham bathtub",
+      imgUrl: img93,
+      category: "BathTubs",
+      price: 150000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Very beautiful bathtub",
+        },
+      ],
+      avgRating: 4.5,
+    },
+
+    {
+      id: "100",
+      productName: "Quadrant Shower Cubicle",
+      imgUrl: img100,
+      category: "Cubicle",
+      price: 250000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Very beautiful Cubicle",
+        },
+      ],
+      avgRating: 4.5,
+    },
+        
+        
+    {
+      id: "101",
+      productName: "Square Shower Cubicle",
+      imgUrl: img101,
+      category: "Cubicle",
+      price: 220000,
+      reviews: [
+        {
+          rating: 4.7,
+          text: "Very beautiful Cubicle",
+        },
+      ],
+      avgRating: 4.5,
+    },
+  
 
 
 ];

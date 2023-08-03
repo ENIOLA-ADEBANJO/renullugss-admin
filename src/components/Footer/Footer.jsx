@@ -18,7 +18,9 @@ const Footer = () => {
             </div>
           </div>
           <p className="footer__text mt-4">
-              Welcome to Renllugs Building Resources,We Provide Quality, Durable and Affordable Building Resorces and Deliver anywhere in Nigeria
+              Welcome to Renllugs Building Resources,
+              <br/>
+              We Provide Quality, Durable and Affordable Building Resources and Deliver anywhere in Nigeria
             </p>
         </Col>
         <Col lg= '3' md = '3' className='mb-4'>

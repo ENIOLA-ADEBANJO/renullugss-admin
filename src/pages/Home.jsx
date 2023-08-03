@@ -12,6 +12,7 @@ import Services from '../services/Services';
 import products from '../assets/data/products';
 import ProductsList from '../components/UI/ProductsList';
 import counterImg from '../assets/images/cements/Cement.jpeg';
+import img100 from "../assets/images/cubicle/Quadrant Shower Cubicle.jpeg"
 
 import Clock from '../components/UI/Clock';
 const Home = () => {
@@ -25,14 +26,14 @@ const Home = () => {
 
   useEffect(() => {
     const filteredTrendingProducts = products.filter(
-      (item) => item.category === 'Cements'
+      (item) => item.category === 'Toilet Seats'
     );
     const filteredBestSalesProducts = products.filter(
-      (item) => item.category === 'Door Handles'
+      (item) => item.category === 'Toilet Taps'
     );
 
     const filteredMobileProducts = products.filter(
-      (item) => item.category === 'Door Knobs'
+      (item) => item.category === 'Door Hooks'
     );
 
     const filteredWirelessProducts = products.filter(
@@ -40,7 +41,7 @@ const Home = () => {
     );
 
     const filteredPopularProducts = products.filter(
-      (item) => item.category === 'Toilet Seats'
+      (item) => item.category === 'Cements'
     );
 
     setTrendingProducts(filteredTrendingProducts);
@@ -58,12 +59,12 @@ const Home = () => {
             <Col lg='6' md='6'>
               <div className="hero__content">
                 <h5 className="hero__subtitle">
-                  Renullugs Building Resources
+                  Renllugs Building Resources
                 </h5>
                 <br/>
-                <h3> NO.1 ONLINE BUILDUNG RESOURCES SHOPPING PLATFORM IN NIGERIA</h3>
+                <h3> No. 1 Online Shopping Platform for Building Resources in Nigeria</h3>
                 <br/>
-                <p>Experience the pleasure of getting affordable and quality bulding resources in Nigeria all from your home </p>
+                <p>Experience the pleasure of getting affordable and quality bulding resources on our platform with fast delivery from the comfort your home </p>
                   <motion.button whileTap={{scale: 1.2}} className='buy__btn'> <Link to = '/shop'>SHOP NOW</Link></motion.button>
               </div>
 
@@ -83,7 +84,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg='12' className='text-center mb-5'>
-              <h2 className='section__title'>Cements Products</h2>
+              <h2 className='section__title'>Toilet Seats</h2>
             </Col>
             <ProductsList data={trendingProducts}/>
           </Row>
@@ -94,7 +95,7 @@ const Home = () => {
         <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
-                <h2 className='section__title'>Door Handles</h2>
+                <h2 className='section__title'>Toilet Taps</h2>
               </Col>
 
               <ProductsList data={bestSalesProducts}/>
@@ -109,7 +110,7 @@ const Home = () => {
 
             <div className="clock__top-content">
               <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
-              <h3 className='text-white fs-5 mb-3'>Quality Armchair</h3>
+              <h3 className='text-white fs-5 mb-3'>Quadrant Shower Cubicle</h3>
             </div>
             <Clock />
 
@@ -119,8 +120,8 @@ const Home = () => {
           </Col>
 
 
-            <Col lg='6' md='12' className='text-end counter__img'>
-              <img src={counterImg} alt='' />
+            <Col lg='4' md='12' className='text-end counter__img'>
+              <img src={img100} alt='' />
             </Col>
           </Row>
         </Container>
@@ -130,7 +131,7 @@ const Home = () => {
       <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
-                <h2 className='section__title'>New Arrivals</h2>
+                <h2 className='section__title'>Door Hooks</h2>
               </Col>
 
               <ProductsList data={mobileProducts}/>
@@ -143,7 +144,7 @@ const Home = () => {
       <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
-                <h2 className='section__title'>Toilet Seats</h2>
+                <h2 className='section__title'>Cements</h2>
               </Col>
 
               <ProductsList data={popularProducts}/>
