@@ -159,7 +159,7 @@ const Home = () => {
       <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
-                <h2 className='section__title'>Cements</h2>
+                <h2 className='section__title'>Cemen</h2>
               </Col>
               {
               loading ? <h5 className='fw-bold'>Loading....</h5>:
