@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import '../styles/login.css';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'; // Import updateProfile
 import { setDoc, doc } from 'firebase/firestore';
 import { auth, db } from '../firebase.config'; // Import db from firebase.config
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [username, setUsername] = useState('');

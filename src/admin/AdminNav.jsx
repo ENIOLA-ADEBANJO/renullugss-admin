@@ -96,10 +96,10 @@ const AdminNav = () => {
 
 const menuToggle =  ()=> menuRef.current.classList.toggle('active__menu');
 
-const navigateToCart = () => {
-  navigate('/cart');
+// const navigateToCart = () => {
+//   navigate('/cart');
 
-};
+// };
 
 const toggleProfileActions = ()=> profileActionRef.current.classList.toggle('show__profileActions')
 

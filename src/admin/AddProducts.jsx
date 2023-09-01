@@ -16,7 +16,6 @@ const AddProducts = () => {
   const [enterPrice, setEnterPrice] = useState('')
   const [enterProductImg, setEnterProductImg] = useState(null);
   const [loading, setLoading] = useState(false)
-
   const navigate = useNavigate()
 
 
@@ -55,7 +54,7 @@ const AddProducts = () => {
     
               setLoading(false);
               toast.success('Product successfully added!');
-              navigate('/dashboard/all-products');
+              navigate('/dashboard/add-products');
             } catch (err) {
               setLoading(false);
               toast.error('Failed to add product to Firestore.');
@@ -83,20 +82,20 @@ const AddProducts = () => {
             <Form onSubmit={addProduct}>
           <FormGroup className="form__group">
             <span> Product title </span>
-            <input type="text"  placeholder='Double sofa' value={enterTitle} onChange={e=> setEnterTitle(e.target.value)} required />
+            <input type="text"  placeholder='Double sofa' value={enterTitle} onChange={e=> setEnterTitle(e.target.value)} />
           </FormGroup>
           <FormGroup className="form__group">
             <span> Short Description </span>
-            <input type="text"  placeholder='lorem...' value={enterShortDesc} onChange={e=> setEnterShortDesc(e.target.value)} required />
+            <input type="text"  placeholder='lorem...' value={enterShortDesc} onChange={e=> setEnterShortDesc(e.target.value)} />
           </FormGroup>
           <FormGroup className="form__group">
             <span> Description </span>
-            <input type="text"  placeholder='lorem...' value={enterDescription} onChange={e=> setEnterDescription(e.target.value)} required/>
+            <input type="text"  placeholder='lorem...' value={enterDescription} onChange={e=> setEnterDescription(e.target.value)} />
           </FormGroup>
         <div className='d-flex align-items-center justify-content-between gap-5'>
           <FormGroup className="form__group w-50">
             <span> Price </span>
-            <input type="text"  placeholder='₦0.00' value={enterPrice} onChange={e=> setEnterPrice(e.target.value)} required />
+            <input type="text"  placeholder='₦0.00' value={enterPrice} onChange={e=> setEnterPrice(e.target.value)} />
           </FormGroup>
 
   
@@ -131,6 +130,7 @@ const AddProducts = () => {
               <option value="third__section">Third Section</option>
               <option value="fourth__section">Fourth Section</option>
               <option value="fifth__section">Fifth Section</option>
+              <option value="counter__section">Counter Section</option>
               <option value="no__section">No Section</option>
             </select>
           </FormGroup>

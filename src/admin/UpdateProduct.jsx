@@ -11,7 +11,7 @@ import '../styles/update-product.css'
 const UpdateProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [productData, setProductData] = useState({});
+  // const [productData, setProductData] = useState({});
   const [enterTitle, setEnterTitle] = useState('');
   const [enterShortDesc, setEnterShortDesc] = useState('');
   const [enterDescription, setEnterDescription] = useState('');
@@ -25,7 +25,7 @@ const UpdateProduct = () => {
         const productRef = doc(db, 'products', id);
         const productSnapshot = await getDoc(productRef);
         if (productSnapshot.exists()) {
-          setProductData(productSnapshot.data());
+          // setProductData(productSnapshot.data());
           setEnterTitle(productSnapshot.data().productName);
           setEnterShortDesc(productSnapshot.data().shortDesc);
           setEnterDescription(productSnapshot.data().description);

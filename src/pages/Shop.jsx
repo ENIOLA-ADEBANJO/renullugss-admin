@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 import CommonSection from '../components/UI/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
-import ProductsList from '../components/UI/ProductsList';
 import useGetData from '../custom-hooks/useGetData'; // Import the custom hook
 import '../styles/shop.css';
+import ProductCard from '../components/UI/ProductCard';
+
 
 const Shop = () => {
   const { data: productsData, loading } = useGetData('products');
   const [filteredProductsData, setFilteredProductsData] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [sortOrder, setSortOrder] = useState('');
+  // const [sortOrder, setSortOrder] = useState('');
 
   useEffect(() => {
     // Extract categories from productsData
@@ -33,8 +34,6 @@ const Shop = () => {
 
   const handleSort = (e) => {
     const sortValue = e.target.value;
-
-    setSortOrder(sortValue);
 
     let sortedProducts = [...filteredProductsData];
     if (sortValue === 'lowest') {
@@ -102,13 +101,17 @@ const Shop = () => {
 
       <section className='pt-0'>
         <Container>
-          <Row>
+        <Row>
             {loading ? (
               <h1 className='text-center fs-4'>Loading...</h1>
             ) : filteredProductsData.length === 0 ? (
               <h1 className='text-center fs-4'>No products are found!</h1>
             ) : (
-              <ProductsList data={filteredProductsData} />
+              <Row>
+                {filteredProductsData.map((item) => (
+                  <ProductCard item={item} key={item.id} />
+                ))}
+              </Row>
             )}
           </Row>
         </Container>

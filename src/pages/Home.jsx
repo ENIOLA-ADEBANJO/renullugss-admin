@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Services from '../services/Services';
 import ProductsList from '../components/UI/ProductsList';
-import img100 from "../assets/images/cubicle/Quadrant Shower Cubicle.jpeg"
 import Clock from '../components/UI/Clock';
 import useGetData from '../custom-hooks/useGetData';
+
 
 const Home = () => {
   const {data: products, loading} = useGetData('products')
@@ -18,7 +18,8 @@ const Home = () => {
   const [thirdSection, setThirdSection] = useState([]);
   const [fourthSection, setFourthSection] = useState([]);
   const [fifthSection, seFifthSection] = useState([]);
-  const year = new Date().getFullYear();
+  const [counterSection, setCounterSection] = useState([]);
+  // const year = new Date().getFullYear();
 
   useEffect(() => {
     const filteredFirstSection = products.filter(
@@ -40,11 +41,16 @@ const Home = () => {
       (item) => item.section === 'fifth__section'
     );
 
+    const filteredCounterSection= products.filter(
+      (item) => item.section === 'counter__section'
+    );
+
     setFirstSection(filteredFirstSection);
     setSecondSection(filteredSecondSection);
     setThirdSection(filteredThirdSection);
     setFourthSection(filteredFourthSection);
     seFifthSection(filteredFifthSection)
+    setCounterSection(filteredCounterSection)
   }, [products]);
 
   return (
@@ -122,7 +128,7 @@ const Home = () => {
 
 
             <Col lg='4' md='12' className='text-end counter__img'>
-              <img src={img100} alt='' />
+            <ProductsList data={counterSection}/>
             </Col>
           </Row>
         </Container>
