@@ -1,0 +1,33 @@
+.add-products {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .add-products h4 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .form__group {
+    margin-bottom: 10px;
+  }
+  
+  .form__group span {
+    font-weight: bold;
+  }
+  
+  .buy__btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .add-products {
+      width: 100%;
+    }
+  }
+  

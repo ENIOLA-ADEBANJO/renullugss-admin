@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import '../styles/login.css'
 import Helmet from '../components/Helmet/Helmet'
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap'
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import {auth} from '../firebase.config'
 import {toast} from 'react-toastify'
@@ -27,7 +27,7 @@ const Login = () => {
       console.log(user)
       setLoading(false)
       toast.success('Successfully logged in')
-      navigate('/checkout')
+      navigate('/dashboard')
 
     }catch (error){
       setLoading(false)
@@ -60,7 +60,6 @@ const Login = () => {
               <button type="submit" className="buy__btn auth__btn">
                 Login
               </button>
-              <p>Do'nt have an account?<Link to= '/signup'> Create an account </Link></p>
 
             </Form>
 

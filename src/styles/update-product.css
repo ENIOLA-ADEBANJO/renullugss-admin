@@ -1,0 +1,81 @@
+/* Importing the update-product.css file */
+@import url('update-product.css');
+
+/* Styling the container */
+.update-product {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fafafa;
+}
+
+/* Styling the h4 tag */
+.update-product h4 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Styling the form */
+.update-product form {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Styling the form group */
+.update-product form .form__group {
+  margin-bottom: 10px;
+}
+
+/* Styling the label */
+.update-product form .form__group label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling the input and textarea */
+.update-product form .form__group input,
+.update-product form .form__group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Styling the button */
+.update-product form button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling the form on mobile devices */
+@media (max-width: 768px) {
+  .update-product {
+    width: 100%;
+  }
+}
+
+/* Styling the form sections */
+.update-product form .form__group {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Styling the button */
+.update-product form button.buy__btn {
+  background-color: #333;
+  color: white;
+  border: 1px solid #ccc;
+}

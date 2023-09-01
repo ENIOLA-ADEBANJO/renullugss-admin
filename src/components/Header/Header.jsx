@@ -2,8 +2,8 @@ import React, {useRef, useEffect} from 'react'
 import './header.css'
 
 import {motion} from 'framer-motion'
-import logo from '../../assets/images/eco-logo.png'
-import userIcon from '../../assets/images/user-icon.png'
+import logo from '../../assets/images/simp.jpeg'
+
 
 import {Container, Row} from "reactstrap";
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -119,10 +119,7 @@ const Header = () => {
             <span className="badge">{totalQuantity}</span>
             </span> 
             
-            {/* <div className='profile'>
-              <motion.img whileTap={{scale:1.2}} src={ currentUser ? 
-              currentUser.photoURL: userIcon} onClick={toggleProfileActions}/> 
-
+            <div className='profile'>
                <div 
                 className="profile__actions" 
                 ref={profileActionRef} 
@@ -131,12 +128,11 @@ const Header = () => {
                 <span onClick={logout}> Logout </span> 
                 ) : ( 
                   <div className=' d-flex align-items-center justify-content-center flex-column'>
-                    <Link to='/signup'>Signup</Link>
                     <Link to='/login'>Login</Link>
                  </div>
                  )}
                </div>
-            </div>  */}
+            </div> 
 
             <div className="mobile__menu">
               <span onClick={menuToggle}>

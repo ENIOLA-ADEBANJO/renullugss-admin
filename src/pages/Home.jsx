@@ -1,55 +1,51 @@
 import React, {useState, useEffect} from 'react';
 import Helmet from '../components/Helmet/Helmet';
-
 import '../styles/home.css'
-
 import {Container, Row, Col} from "reactstrap";
 import heroImg from '../assets/images/hero-img.png';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
 import Services from '../services/Services';
-import products from '../assets/data/products';
 import ProductsList from '../components/UI/ProductsList';
-import counterImg from '../assets/images/cements/Cement.jpeg';
 import img100 from "../assets/images/cubicle/Quadrant Shower Cubicle.jpeg"
-
 import Clock from '../components/UI/Clock';
-const Home = () => {
-  const [trendingProducts, setTrendingProducts] = useState([]);
-  const [bestSalesProducts, setBestSalesProducts] = useState([]);
-  const [mobileProducts, setMobileProducts] = useState([]);
-  const [wirelessProducts, setWirelessProducts] = useState([]);
-  const [popularProducts, setPopularProducts] = useState([]);
+import useGetData from '../custom-hooks/useGetData';
 
+const Home = () => {
+  const {data: products, loading} = useGetData('products')
+  const [firstSection, setFirstSection] = useState([]);
+  const [secondSection, setSecondSection] = useState([]);
+  const [thirdSection, setThirdSection] = useState([]);
+  const [fourthSection, setFourthSection] = useState([]);
+  const [fifthSection, seFifthSection] = useState([]);
   const year = new Date().getFullYear();
 
   useEffect(() => {
-    const filteredTrendingProducts = products.filter(
-      (item) => item.category === 'Toilet Seats'
+    const filteredFirstSection = products.filter(
+      (item) => item.section === 'first__section'
     );
-    const filteredBestSalesProducts = products.filter(
-      (item) => item.category === 'Toilet Taps'
-    );
-
-    const filteredMobileProducts = products.filter(
-      (item) => item.category === 'Door Hooks'
+    const filteredSecondSection = products.filter(
+      (item) => item.section === 'second__section'
     );
 
-    const filteredWirelessProducts = products.filter(
-      (item) => item.category === 'wireless'
+    const filteredThirdSection = products.filter(
+      (item) => item.section === 'third__section'
     );
 
-    const filteredPopularProducts = products.filter(
-      (item) => item.category === 'Cements'
+    const filteredFourthSection = products.filter(
+      (item) => item.section === 'fouth__section'
     );
 
-    setTrendingProducts(filteredTrendingProducts);
-    setBestSalesProducts(filteredBestSalesProducts);
-    setMobileProducts(filteredMobileProducts);
-    setWirelessProducts(filteredWirelessProducts);
-    setPopularProducts(filteredPopularProducts)
-  }, []);
+    const filteredFifthSection = products.filter(
+      (item) => item.section === 'fifth__section'
+    );
+
+    setFirstSection(filteredFirstSection);
+    setSecondSection(filteredSecondSection);
+    setThirdSection(filteredThirdSection);
+    setFourthSection(filteredFourthSection);
+    seFifthSection(filteredFifthSection)
+  }, [products]);
 
   return (
     <Helmet title={'Home'}>
@@ -61,9 +57,7 @@ const Home = () => {
                 <h2 className="hero__subtitle">
                   Renllugs Building Resources
                 </h2>
-                <br/>
-                <h3> No. 1 Online Shopping Platform for Building Resources in Nigeria</h3>
-                <br/>
+                <p> No. 1 Online Shopping Platform for Building Resources in Nigeria</p>
                 <p>Experience the pleasure of getting affordable and quality building resources on our platform with fast delivery from the comfort of your home </p>
                   <motion.button whileTap={{scale: 1.2}} className='buy__btn'> <Link to = '/shop'>SHOP NOW</Link></motion.button>
               </div>
@@ -80,25 +74,32 @@ const Home = () => {
       </section>
 
       <Services />
-      <section className="trending__products">
+      <section className="first__section">
         <Container>
           <Row>
             <Col lg='12' className='text-center mb-5'>
               <h2 className='section__title'>Toilet Seats</h2>
             </Col>
-            <ProductsList data={trendingProducts}/>
+            {
+              loading ? <h5 className='fw-bold'>Loading....</h5>:
+              <ProductsList data={firstSection}/>
+            }
+
           </Row>
         </Container>
       </section>
 
-      <section className="best__sales">
+      <section className="second__section">
         <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
                 <h2 className='section__title'>Toilet Taps</h2>
               </Col>
+              {
+              loading ? <h5 className='fw-bold'>Loading....</h5>:
+              <ProductsList data={secondSection}/>
+              }
 
-              <ProductsList data={bestSalesProducts}/>
             </Row>
         </Container> 
       </section>
@@ -127,27 +128,39 @@ const Home = () => {
         </Container>
       </section>
       
-      <section className="new__arival">
+      <section className="third__section">
       <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
                 <h2 className='section__title'>Door Hooks</h2>
               </Col>
+              {
+              loading ? <h5 className='fw-bold'>Loading....</h5>:
+              <ProductsList data={thirdSection}/>
+              }
+                            {
+              loading ? <h5 className='fw-bold'>Loading....</h5>:
+              <ProductsList data={fourthSection}/>
+              }
 
-              <ProductsList data={mobileProducts}/>
-              <ProductsList data={wirelessProducts}/>
+
+
             </Row>
         </Container> 
       </section>
 
-      <section className="popular__category">
+      <section className="fifth__section">
       <Container>
           <Row>
               <Col lg='12' className='text-center mb-5'>
                 <h2 className='section__title'>Cements</h2>
               </Col>
+              {
+              loading ? <h5 className='fw-bold'>Loading....</h5>:
+              <ProductsList data={fifthSection}/>
+              }
 
-              <ProductsList data={popularProducts}/>
+
             </Row>
         </Container> 
       </section>

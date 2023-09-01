@@ -1,10 +1,13 @@
 
 .product__item{
     cursor: pointer;
+
+    
 }
 
 .product__img{
     width: 15rem;
+    
 }
 
 .product__info h3 a {
@@ -12,6 +15,7 @@
     color: var(--primary-color);
     font-weight: 600;
     margin-top: 15px;
+    
 }
 
 .product__info a:hover{
@@ -22,9 +26,6 @@
     font-size: 0.9rem;
 }
 
-.product__img{
-    width: 15rem;
-}
 .product__card-bottom .price{
     color: var(--primary-color);
     font-size: 1rem;
@@ -44,6 +45,20 @@
     .product__info h3 a{
         font-size: 1rem;
     }
+    .product__img{
+        max-width: fit-content;
+        min-width: fit-content;
+    }
+
+    .product__item{
+        cursor: pointer;
+        border: 3px solid var(--primary-color);
+        border-radius: 10px;
+        background: rgb(155, 164, 158);
+        text-align: center;
+        margin: auto;
+        
+    }
 
 }
 
@@ -54,6 +69,21 @@
 
     .product__card-bottom span i{
         font-size: 1rem;
+    }
+
+    .product__img{
+        max-width: fit-content;
+        min-width: fit-content;
+    }
+
+    .product__item{
+        cursor: pointer;
+        border: 3px solid var(--primary-color);
+        border-radius: 10px;
+        background: rgb(155, 164, 158);
+        text-align: center;
+        margin: auto;
+        
     }
 
 }

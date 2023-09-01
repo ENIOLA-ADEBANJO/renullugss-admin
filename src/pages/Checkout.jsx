@@ -1,11 +1,8 @@
 import React from 'react'
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap'
 import Helmet from '../components/Helmet/Helmet';
-import { motion } from 'framer-motion'
 import CommonSection from '../components/UI/CommonSection'
-import {cartActions} from '../redux/slices/cartSlice'
-import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { useSelector} from 'react-redux'
 import '../styles/checkout.css'
 
 
