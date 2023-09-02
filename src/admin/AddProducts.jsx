@@ -82,55 +82,34 @@ const AddProducts = () => {
             <Form onSubmit={addProduct}>
           <FormGroup className="form__group">
             <span> Product title </span>
-            <input type="text"  placeholder='Double sofa' value={enterTitle} onChange={e=> setEnterTitle(e.target.value)} />
+            <input type="text"   value={enterTitle} onChange={e=> setEnterTitle(e.target.value)} />
           </FormGroup>
           <FormGroup className="form__group">
             <span> Short Description </span>
-            <input type="text"  placeholder='lorem...' value={enterShortDesc} onChange={e=> setEnterShortDesc(e.target.value)} />
+            <input type="text"   value={enterShortDesc} onChange={e=> setEnterShortDesc(e.target.value)} />
           </FormGroup>
           <FormGroup className="form__group">
             <span> Description </span>
-            <input type="text"  placeholder='lorem...' value={enterDescription} onChange={e=> setEnterDescription(e.target.value)} />
+            <input type="text"  value={enterDescription} onChange={e=> setEnterDescription(e.target.value)} />
           </FormGroup>
         <div className='d-flex align-items-center justify-content-between gap-5'>
           <FormGroup className="form__group w-50">
             <span> Price </span>
             <input type="text"  placeholder='₦0.00' value={enterPrice} onChange={e=> setEnterPrice(e.target.value)} />
           </FormGroup>
-
-  
           <FormGroup className="form__group w-50">
             <span> Category </span>
-            <select className='w-100 p-2' value={enterCategory} onChange={e=> setEnterCategory(e.target.value)} 
-            >
-              <option>Select Category</option>
-              <option value="Cements">Cement</option>
-              <option value="Door Handles">Door Handles</option>
-              <option value="Door Hinges">Door Hinges</option>
-              <option value="Door Hooks">Door Hooks</option>
-              <option value="Door Knobs">Door Knobs</option>
-              <option value="Toilet Seats">Toilet Seats</option>
-              <option value="Toilet Seat Cover">Toilet Seat Cover</option>
-              <option value="Urinal">Urinal</option>
-              <option value="Toilet Taps">Toilet Taps</option>
-              <option value="Toilet Basins">Toilet Basins</option>
-              <option value="BathTubs">BathTubs</option>
-              <option value="Cubicle">Cubicle</option>
-              <option value="Keys">Keys</option>
-              <option value="Shovel">Shovel</option>
-            </select>
+            <input className='w-100 p-2' value={enterCategory} onChange={e=> setEnterCategory(e.target.value)}  />
           </FormGroup>
           <FormGroup className="form__group w-50">
             <span> Section </span>
             <select className='w-100 p-2' value={enterSection} onChange={e=> setEnterSection(e.target.value)} 
             >
-              <option>Select Section</option>
+              <option>Select Home Section</option>
               <option value="first__section">First Section</option>
               <option value="second__section">Second Section</option>
               <option value="third__section">Third Section</option>
               <option value="fourth__section">Fourth Section</option>
-              <option value="fifth__section">Fifth Section</option>
-              <option value="counter__section">Counter Section</option>
               <option value="no__section">No Section</option>
             </select>
           </FormGroup>
