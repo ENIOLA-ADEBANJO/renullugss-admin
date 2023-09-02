@@ -8,7 +8,7 @@
 .nav__wrapper{
     display:flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 
@@ -36,8 +36,12 @@
     align-items: center;
     column-gap: 2.7rem;
     margin-bottom: 0;
+    row-gap: 1rem; /* Adjust the gap between menu items */
 }
 
+.menu li {
+    list-style: none; 
+  }
 .nav__item a{
     color:var(--primary-color);
     font-weight: 500;
@@ -78,7 +82,7 @@
     font-weight: 600;
     z-index: 10;
 }
-.nav__icons .profile img{
+.nav__icons .profile span{
     width:30px;
     height:30px;
     cursor: pointer;
@@ -93,8 +97,8 @@
 .nav__icons .profile .profile__actions{
     position: relative;
     top:98%;
-    left:10;
-    width: 10px;
+    left:-7px;
+    width: max-content; 
     z-index: 10;
     padding: 10px;
     display: flex;
@@ -106,6 +110,8 @@
     font-weight: 600;
     font-size: 1rem;
     color: var(--primary-color);
+    background-color: #fff; 
+    border-radius: 5px; 
 
 
 }
@@ -167,9 +173,6 @@
         display: block;
     }
 
-    /* .mobile__menu span i{
-        font-size: ;
-    } */
     .logo img{
         width: 2.5rem;
         height: 2.5rem;
