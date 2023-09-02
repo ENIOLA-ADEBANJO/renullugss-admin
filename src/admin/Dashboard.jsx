@@ -2,7 +2,7 @@
 import '../styles/dashboard.css'
 import React from 'react'
 import {Container, Row, Col} from "reactstrap"
-
+import { Link } from 'react-router-dom';
 import useGetData from '../custom-hooks/useGetData';
 
 const Dashboard = () => {
@@ -15,16 +15,30 @@ const Dashboard = () => {
       <Row>
         
         <Col className="lg-3">
-          <div className="revenue__box">
-            <h5>Total Sales</h5>
-            <span>$7890</span>
+        <Link to = '/dashboard/add-section'>
+          <div className="users__box">
+            <h5>Add Home Page</h5>
+            <span>Section</span>
           </div>
+        </Link>
         </Col>
+
         <Col className="lg-3">
-          <div className="orders__box">
-            <h5>Orders</h5>
-            <span>789</span>
+        <Link to = '/dashboard/add-hero'>
+          <div className="users__box">
+            <h5>Add Home Page</h5>
+            <span>Hero</span>
           </div>
+        </Link>
+        </Col>
+
+        <Col className="lg-3">
+        <Link to = '/dashboard/add-counter'>
+          <div className="users__box">
+            <h5>Add Home Page</h5>
+            <span>Counter</span>
+          </div>
+        </Link>
         </Col>
 
         <Col className="lg-3">
