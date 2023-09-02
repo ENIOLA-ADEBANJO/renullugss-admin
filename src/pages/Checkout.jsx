@@ -71,7 +71,7 @@ const Checkout = () => {
         <Container>
           <Row>
             <Col lg='8'>
-              <h6 className='mb-4 fw-bold'>Billing Information</h6>
+              <h6 className='mb-4 fw-bold'>(Note: Fill the Billing Info to be able to Proceed to Pay)</h6>
               <Form className='billing__form'>
                 <FormGroup className="form__group">
                   <input
