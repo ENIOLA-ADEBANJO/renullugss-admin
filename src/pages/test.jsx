@@ -1,167 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import { toast } from 'react-toastify';
-import { collection, addDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore';
-import useGetData from '../custom-hooks/useGetData';
-import { db, storage } from '../firebase.config';
-import { uploadBytes, ref, getDownloadURL} from 'firebase/storage';
+import React, { useEffect } from 'react';
+import '../styles/cart.css';
+import Helmet from '../components/Helmet/Helmet';
+import CommonSection from '../components/UI/CommonSection';
+import { Container, Row, Col } from 'reactstrap';
+import { motion } from 'framer-motion';
+import { cartActions } from '../redux/slices/cartSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-const AddHero = () => {
-  const [heroSection, setHeroSection] = useState({
-    heroTitle: '',
-    heroSubtitle: '',
-    heroSubtitle2: '',
-    heroImageURL: '',
-  });
+const Cart = () => {
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const dispatch = useDispatch();
 
-  const [heroImage, setHeroImage] = useState(null);
-
-  const { data: heroSectionData } = useGetData('heroSection');
-
+  // Load cart data from localStorage when the component is mounted
   useEffect(() => {
-    if (heroSectionData.length > 0) {
-      setHeroSection(heroSectionData[0]);
+    const storedCartItems = localStorage.getItem('cartItems');
+    const storedTotalAmount = localStorage.getItem('totalAmount');
+
+    if (storedCartItems && storedTotalAmount) {
+      dispatch(cartActions.setItems(JSON.parse(storedCartItems)));
+      dispatch(cartActions.setTotalAmount(JSON.parse(storedTotalAmount)));
     }
-  }, [heroSectionData]);
+  }, [dispatch]);
 
-  const handleAddHeroSection = async (e) => {
-    e.preventDefault();
-
-    try {
-      // Upload the image to storage first and get the URL
-      if (heroImage) {
-        const storageRef = ref(storage, `heroImages/${heroImage.name}`);
-        await uploadBytes(storageRef, heroImage);
-
-        // Get the download URL for the uploaded image
-        const downloadURL = await getDownloadURL(storageRef);
-
-        // Set the image URL in the heroSection object
-        const updatedHeroSection = {
-          ...heroSection,
-          heroImageURL: downloadURL,
-        };
-
-        // Update the heroSection in Firestore
-        await updateHeroSectionInFirestore(updatedHeroSection);
-
-        toast.success('Hero section added successfully!');
-      } else {
-        toast.error('Please select an image.');
-      }
-    } catch (error) {
-      toast.error('Failed to add hero section.');
-      console.error(error);
-    }
-  };
-
-  const updateHeroSectionInFirestore = async (updatedHeroSection) => {
-    try {
-      if (heroSectionData.length > 0) {
-        // Update the existing hero section
-        const docRef = doc(db, 'heroSection', heroSectionData[0].id);
-        await updateDoc(docRef, updatedHeroSection);
-      } else {
-        // Create a new hero section
-        await addDoc(collection(db, 'heroSection'), updatedHeroSection);
-      }
-
-      setHeroSection(updatedHeroSection);
-      console.log('Hero section updated successfully:', updatedHeroSection);
-    } catch (error) {
-      console.error('Error updating hero section:', error);
-    }
-  };
-
-  const handleDeleteHeroSection = async () => {
-    try {
-      if (heroSectionData.length > 0) {
-        // Delete the existing hero section
-        const docRef = doc(db, 'heroSection', heroSectionData[0].id);
-        await deleteDoc(docRef);
-        
-        // Reset the heroSection object
-        const resetHeroSection = {
-          heroTitle: '',
-          heroSubtitle: '',
-          heroSubtitle2: '',
-          heroImageURL: '',
-        };
-        
-        setHeroSection(resetHeroSection);
-        toast.success('Hero section deleted successfully!');
-      } else {
-        toast.error('Hero section does not exist.');
-      }
-    } catch (error) {
-      toast.error('Failed to delete hero section.');
-      console.error(error);
-    }
-  };
+  // Save cart data to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('totalAmount', JSON.stringify(totalAmount));
+  }, [cartItems, totalAmount]);
 
   return (
-    <Container>
-      <Row>
-        <Col lg='8' className='mx-auto mt-4'>
-          <h4 className='mb-4'>Add Hero Section</h4>
-          <Form onSubmit={handleAddHeroSection}>
-          <FormGroup>
-              <Label for='heroTitle'>Hero Title</Label>
-              <Input
-                type='text'
-                name='heroTitle'
-                id='heroTitle'
-                value={heroSection.heroTitle}
-                onChange={(e) => setHeroSection({ ...heroSection, heroTitle: e.target.value })}
-                placeholder='Enter Hero Title'
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for='heroSubtitle'>Hero Subtitle</Label>
-              <Input
-                type='text'
-                name='heroSubtitle'
-                id='heroSubtitle'
-                value={heroSection.heroSubtitle}
-                onChange={(e) =>
-                  setHeroSection({ ...heroSection, heroSubtitle: e.target.value })
-                }
-                placeholder='Enter Hero Subtitle'
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for='heroSubtitle2'>Hero Subtitle 2</Label>
-              <Input
-                type='text'
-                name='heroSubtitle2'
-                id='heroSubtitle2'
-                value={heroSection.heroSubtitle2}
-                onChange={(e) =>
-                  setHeroSection({ ...heroSection, heroSubtitle2: e.target.value })
-                }
-                placeholder='Enter Hero Subtitle 2'
-              />
-            </FormGroup>
-            <FormGroup className='form__group'>
-              <Label for='heroImage'>Hero Image</Label>
-              <Input
-                type='file'
-                name='heroImage'
-                id='heroImage'
-                onChange={(e) => setHeroImage(e.target.files[0])}
-              />
-            </FormGroup>
-            <Button color='primary' type='submit'>
-              Add Hero Section
-            </Button>
-            <Button color='danger' onClick={handleDeleteHeroSection} className='ms-2'>
-              Delete Hero Section
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+    <Helmet title='Cart'>
+      <CommonSection title='Shopping Cart' />
+      <section>
+        <Container>
+          <Row>
+            {/* ... your existing JSX */}
+          </Row>
+        </Container>
+      </section>
+    </Helmet>
   );
 };
 
-export default AddHero;
+// Rest of your component
+
+export default Cart;
